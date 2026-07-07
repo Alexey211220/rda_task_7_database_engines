@@ -20,9 +20,9 @@ CREATE TABLE GeoIPCache (
 -- Creating a table for storing product descriptions for different countries (Columns: ID, CountryID, ProductID, Description )
 CREATE TABLE ProductDescription (
     ID INT,
-    CountryID INT,
-    ProductID INT,
     Description TEXT,
+    ProductID INT,
+    CountryID INT,
     PRIMARY KEY (ID),
     FOREIGN KEY (CountryID) REFERENCES Countries(ID)
 ) ENGINE=MyISAM;
@@ -30,8 +30,8 @@ CREATE TABLE ProductDescription (
 -- Creating a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
 CREATE TABLE Logs (
     ID INT,
-    Time DATETIME,
-    LogRecord TEXT,
+    Timestamp DATETIME,
+    Message TEXT,
     PRIMARY KEY (ID)
 ) ENGINE=Blackhole;
 
