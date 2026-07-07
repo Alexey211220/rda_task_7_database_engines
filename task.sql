@@ -18,7 +18,7 @@ CREATE TABLE GeoIPCache (
 ) ENGINE=Memory;
 
 -- Creating a table for storing product descriptions for different countries (Columns: ID, CountryID, ProductID, Description )
-CREATE TABLE ProductDescriptions (
+CREATE TABLE ProductDescription (
     ID INT,
     CountryID INT,
     ProductID INT,
@@ -36,7 +36,7 @@ CREATE TABLE Logs (
 ) ENGINE=Blackhole;
 
 -- Creating a table for storing reporting data, which will be send to a separate application in the CSV format for analytics purposes (Columns:  Date, ProductName, Orders)
-CREATE TABLE ReportingData (
+CREATE TABLE ProductReporting (
     Date DATE,
     ProductName VARCHAR(100),
     Orders INT
